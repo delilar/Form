@@ -145,10 +145,29 @@ input:focus {
     transition-duration: 100ms;
 }
 
+.button-section {
+    margin: 2rem 3rem;
+}
+
+.button-section a {
+    text-decoration: none;
+    color: #596D48;
+}
+
 .submit-button {
     background-color: var(--button-border-color);
-    padding: 2rem 5rem;
+    padding: 1rem 2rem;
     color: var(--button-text-color);
     border: transparent;
-    border-radius: 2rem;
+    border-radius: 15px;
+    font-family: Roboto, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.button-section p {
+    margin-top: 1.8rem;
+    font-size: 1rem;
+    font-family: Roboto, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
 }
