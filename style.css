@@ -13,9 +13,14 @@
     --form-background-color: #FFFEFE;
     --input-border-color: #E5E7EB;
     --input-active-border-color: #1D4ED8;
-    --button-border-color: #596D48;
+    --button-background-color: #596D48;
+    --button-active-background-color: #445336;
     --button-text-color: #F9FAFB;
     --icon-subtitle-color: #e2e2e2;
+    --valid-background-input: #b7ed84;
+    --invalid-background-input: #ed8484;
+    --valid-border-color: #a2ee5a;
+    --invalid-border-color: #ee5a5a;
 }
 
 body {
@@ -98,7 +103,7 @@ a {
 }
 
 .title-wrapper {
-    margin: 4rem 3rem;
+    margin: 3rem;
 }
 
 .form-wrapper {
@@ -110,7 +115,7 @@ a {
     margin-left: 3rem;
 }
 
-.form-wrapper .label-text {
+.label-text {
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
 }
 
@@ -127,14 +132,33 @@ a {
     margin-right: 5rem;
 }
 
+input.valid {
+    border-color: var(--valid-border-color);
+}
+
+input.invalid {
+    border-color: var(--invalid-border-color);
+}
+
+.invalid-label {
+    display: none;
+}
+
+.invalid-label.invalid {
+    display: block;
+    color: var(--invalid-border-color);
+}
+
+
 input {
     margin-top: 0.2rem;
     background-color: var(--form-background-color);
     width: 16rem;
-    height: 1.5rem;
+    height: 1.8rem;
     border: 1px solid var(--input-border-color);
     border-radius: 3px;
     transition-duration: 100ms;
+    font-size: 1rem;
 }
 
 input:focus {
@@ -155,14 +179,20 @@ input:focus {
 }
 
 .submit-button {
-    background-color: var(--button-border-color);
+    background-color: var(c);
     padding: 1rem 2rem;
     color: var(--button-text-color);
+    background-color: var(--button-background-color);
     border: transparent;
     border-radius: 15px;
     font-family: Roboto, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
     font-weight: 600;
+    transition: background-color 0.1s ease;
+}
+
+.submit-button:active {
+    background-color: var(--button-active-background-color);
 }
 
 .button-section p {

@@ -26,30 +26,36 @@
                 </div>
                 <div class="form-div">
                     <h3 id="title">Let’s do it!</h3>
-                    <form class="form-wrapper">
+                    <form action="example.com/path" method="get" class="form-wrapper">
                         <div class="input-wrapper">
                             <label class="label-text" for="firstName">FIRST NAME</label>
-                            <input type="text" id="firstName" name="firstName">
+                            <input type="text" id="firstName" name="firstName" required>
+                            <label class="label-text invalid-label" for="email">*invalid email input</label>
                         </div>
                         <div class="input-wrapper">
                             <label class="label-text" for="lastName">LAST NAME</label>
-                            <input type="text" id="lastName" name="lastName">
+                            <input type="text" id="lastName" name="lastName" required>
+                            <label class="label-text invalid-label" for="email">*invalid email input</label>
                         </div>
                         <div class="input-wrapper">
                             <label class="label-text" for="email">EMAIL</label>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" required>
+                            <label class="label-text invalid-label" for="email">*invalid email input</label>
                         </div>
                         <div class="input-wrapper">
                             <label class="label-text" for="phone">PHONE NUMBER</label>
-                            <input type="phone" id="phone" name="phone" pattern="\+?[0-9\s\-\(\)]+">
+                            <input type="phone" id="phone" name="phone" pattern="\+?[0-9\s\-\(\)]+" required>
+                            <label class="label-text invalid-label" for="email">*invalid email input</label>
                         </div>
                         <div class="input-wrapper">
                             <label class="label-text" for="password">PASSWORD</label>
-                            <input type="password" id="password" name="password">
+                            <input type="password" id="password" name="password" required>
+                            <label class="label-text invalid-label" for="email">*invalid email input</label>
                         </div>
                         <div class="input-wrapper">
                             <label class="label-text" for="conf-password">CONFIRM PASSWORD</label>
-                            <input type="password" id="conf-password" name="conf-password">
+                            <input type="password" id="conf-password" name="conf-password" required>
+                            <label class="label-text invalid-label" for="email">*invalid email input</label>
                         </div>
                     </form>
                 </div>
