@@ -1,6 +1,11 @@
 const button = document.querySelector('.submit-button');
 const inputs = document.querySelectorAll('input');
-const invalidLabels = document.querySelectorAll('.invalid-label')
+const invalidLabels = document.querySelectorAll('.invalid-label');
+const password = document.getElementById('password');
+
+function passwordValidate(password) {
+    return /^(?=.*[a-zA-Z]).{8,}$/.test(password);
+}
 
 inputs.forEach((input, index) => {
     input.addEventListener('input', () => {
@@ -19,7 +24,13 @@ inputs.forEach((input, index) => {
             input.classList.add('valid');
         }
     })
+    password.addEventListener('input', () => {
+        console.log(/^(?=.*[a-zA-Z]).{8,}$/.test(password));
+        passwordValidate(password.value)
+    })
 })
+
+
 
 button.addEventListener('click', (event) => {
     event.preventDefault();
